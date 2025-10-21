@@ -26,33 +26,87 @@
 <main class="container">
   <div class="card">
     <h2>Связаться с нами</h2>
+
     <form action="https://ya.ru" method="post" target="_blank">
-      <div class="form-row">
-        <label>Имя <input name="name" type="text" required></label>
-      </div>
-      <div class="form-row">
-        <label>Email <input name="email" type="email" required></label>
-      </div>
-      <div class="form-row">
-        <label>Сообщение <textarea name="message" rows="5" required></textarea></label>
-      </div>
+      
+      <!-- БЛОК 1. Личные контактные данные -->
+      <fieldset>
+        <legend>Личные данные</legend>
 
-      <div class="form-row">
-        <label>Категория заказа
-          <select name="category">
-            <option value="card">Свеча</option>
-            <option value="jewel">Набор свечей</option>
-            <option value="other">Другое</option>
-          </select>
-        </label>
-      </div>
+        <div class="form-row">
+          <label>Фамилия <input type="text" name="lastname" required></label>
+        </div>
 
-      <div class="form-row">
-        <label>Количество <input name="qty" type="number" min="1" value="1"></label>
-      </div>
+        <div class="form-row">
+          <label>Имя <input type="text" name="firstname" required></label>
+        </div>
 
+        <div class="form-row">
+          <label>Группа <input type="text" name="group" required></label>
+        </div>
+
+        <div class="form-row">
+          <label>Мобильный телефон <input type="text" name="phone" placeholder="+7 900 000 00 00" required></label>
+        </div>
+
+        <div class="form-row">
+          <label>Email <input type="email" name="email" required></label>
+        </div>
+
+        <div class="form-row">
+          <label>Пароль для личного кабинета <input type="password" name="password" required></label>
+        </div>
+
+        <div class="form-row">
+          <label>Дата отправки <input type="date" name="send_date" value="<?= date('Y-m-d') ?>"></label>
+        </div>
+      </fieldset>
+
+      <!-- БЛОК 2. Данные заказа -->
+      <fieldset>
+        <legend>Информация о заказе</legend>
+
+        <div class="form-row">
+          <label>Категория заказа:
+            <select name="category">
+              <option value="candle">Свеча</option>
+              <option value="set">Набор свечей</option>
+              <option value="decor">Декор</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Количество <input type="number" name="quantity" min="1" value="1"></label>
+        </div>
+
+        <div class="form-row">
+          <span>Тип доставки:</span><br>
+          <label><input type="radio" name="delivery" value="pickup" checked> Самовывоз</label><br>
+          <label><input type="radio" name="delivery" value="courier"> Курьер</label><br>
+          <label><input type="radio" name="delivery" value="post"> Почта</label>
+        </div>
+
+        <div class="form-row">
+          <label><input type="checkbox" name="gift_wrap" value="yes" checked> Упаковать как подарок</label><br>
+          <label><input type="checkbox" name="subscribe" value="yes"> Подписаться на новости</label>
+        </div>
+
+        <div class="form-row">
+          <label>Комментарий к заказу:
+            <textarea name="message" rows="4" placeholder="Ваши пожелания..."></textarea>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- скрытые данные -->
       <input type="hidden" name="source" value="soficraft-site2">
-      <div><button type="submit">Отправить</button></div>
+      <input type="hidden" name="default_status" value="new_order">
+
+      <div class="form-row">
+        <button type="submit" class="btn">Отправить</button>
+      </div>
+
     </form>
   </div>
 </main>
