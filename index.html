@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>SofiCraft — магазин хендмейда</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+	<link rel="apple-touch-icon" href="images/favicon.png">
+	<meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="images/logo.png" alt="logo">
+    <h1>SofiCraft</h1>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О магазине</a>
+      <a href="gallery.html">Товары</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h2>Добро пожаловать в SofiCraft</h2>
+      <p>Ручная работа — карточки, украшения, подарки. Ниже — краткая навигация по содержимому этой страницы.</p>
+      <p><a href="#popular">Популярные товары</a> • <a href="#delivery">Доставка</a> • <a href="#list">Списки</a></p>
+    </section>
+
+    <div class="grid">
+      <div>
+        <section id="popular" class="card">
+          <h3>Популярные товары</h3>
+          <ol>
+            <li>Брошь "Роза"</li>
+            <li>Открытка "Солнечный день"</li>
+            <li>Браслет ручной работы</li>
+          </ol>
+        </section>
+
+        <section id="delivery" class="card" style="margin-top:12px">
+          <h3>Доставка и оплата</h3>
+          <ul>
+            <li>Доставка по стране: 3-5 рабочих дней</li>
+            <li>Оплата картой / при получении</li>
+          </ul>
+        </section>
+
+        <section id="list" class="card" style="margin-top:12px">
+          <h3>Списки</h3>
+          <p>Нумерованный и ненумерованный:</p>
+          <ol>
+            <li>Категория A
+              <ul>
+                <li>подпункт 1</li>
+                <li>подпункт 2</li>
+              </ul>
+            </li>
+            <li>Категория B</li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="card">
+        <h4>Корзина (пример)</h4>
+        <p>Нету товаров</p>
+        <p><small>Ссылка-картинка:</small></p>
+        <a href="#" data-large="images/product1.jpeg" class="img-link"><img src="images/thumb.jpeg" alt="thumb" class="small"></a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">SofiCraft — демонстрационный сайт</footer>
+  <script src="script.js"></script>
+</body>
+</html>
