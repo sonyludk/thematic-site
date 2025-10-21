@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Контакты — Sweet Candles</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+	<link rel="apple-touch-icon" href="images/favicon.png">
+	<meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <img src="images/candle.png" alt="logo">
+  <h1>Sweet Candles</h1>
+  <nav class="nav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О магазине</a>
+    <a href="gallery.html">Товары</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Связаться с нами</h2>
+    <form action="https://ya.ru" method="post" target="_blank">
+      <div class="form-row">
+        <label>Имя <input name="name" type="text" required></label>
+      </div>
+      <div class="form-row">
+        <label>Email <input name="email" type="email" required></label>
+      </div>
+      <div class="form-row">
+        <label>Сообщение <textarea name="message" rows="5" required></textarea></label>
+      </div>
+
+      <div class="form-row">
+        <label>Категория заказа
+          <select name="category">
+            <option value="card">Свеча</option>
+            <option value="jewel">Набор свечей</option>
+            <option value="other">Другое</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>Количество <input name="qty" type="number" min="1" value="1"></label>
+      </div>
+
+      <input type="hidden" name="source" value="soficraft-site2">
+      <div><button type="submit">Отправить</button></div>
+    </form>
+  </div>
+</main>
+
+<footer class="footer">Sweet Candles</footer>
+<script src="script.js"></script>
+</body>
+</html>
