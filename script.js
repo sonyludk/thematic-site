@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
   document.querySelectorAll('[data-large]').forEach(el=>{
     el.addEventListener('click', (e)=>{
       e.preventDefault();
-      location.href = el.dataset.large;
+      window.open(el.getAttribute('data-large'),'_blank','noopener');
     });
   });
 });
 
- window.open(el.getAttribute('data-large'),'_blank','noopener');
