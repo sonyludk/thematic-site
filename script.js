@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   document.querySelectorAll('[data-large]').forEach(el=>{
     el.addEventListener('click', (e)=>{
       e.preventDefault();
-      window.open(el.getAttribute('data-large'),'_blank','noopener');
+      location.href = el.dataset.large;
     });
   });
 });
+
+ window.open(el.getAttribute('data-large'),'_blank','noopener');
